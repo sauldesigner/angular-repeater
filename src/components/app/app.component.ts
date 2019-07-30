@@ -17,15 +17,18 @@ export class AppComponent implements OnInit {
     this.getData();
   }
 
-
   private getData(): void {
     this._employees = [
       { employeeId: 'AAA', name: 'employee a', attribute: 1 },
       { employeeId: 'BBB', name: 'employee b', attribute: 0 },
       { employeeId: 'CCC', name: 'employee c', attribute: 3 }
     ];
-
   }
+
+
+public employeeSelectedChanged(employee: Employee):void{
+  console.log(employee, '<<<<');
+}
 
 
 

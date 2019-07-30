@@ -44,8 +44,6 @@ export class RepeaterComponent implements OnInit {
             this.setNewValue(newValue);
             this.emitSelectedChanged(this._selectedData);
         }
-
-
     }
 
     private getValueFromClickEvent(e: any): string {
@@ -58,8 +56,7 @@ export class RepeaterComponent implements OnInit {
 
     private setNewValue(value: string): void {
         this._selectedValue = value;
-        console.log(this._selectedValue);
-
+        // console.log(this._selectedValue);
     }
 
 

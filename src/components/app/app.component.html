@@ -3,6 +3,9 @@
 
 <hr />
 
-<block-repeater id="employeeRepeater">
+<block-repeater id="employeeRepeater" 
+                [data]="employees" 
+                propertyKeyName="employeeId" 
+                (selectedChanged)="employeeSelectedChanged($event)">
 
 </block-repeater>
