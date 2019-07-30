@@ -1,0 +1,24 @@
+
+
+<div id="{{id}}_corRepeater">
+
+    <div id="corRepeaterContainer" class="verticalLayout">
+
+        <ng-container *ngFor="let dataItem of itemsForRepetition; let index = index">
+
+            <div id="reapeatItem_{{index}}"
+                 class="??"
+                 (click)="itemClickedHandler(dataItem)">
+                  {{index}}
+                <!-- <ng-container *ngTemplateOutlet="template">
+                </ng-container> -->
+
+            </div>
+
+
+        </ng-container>
+    </div>
+
+</div>
+
+
