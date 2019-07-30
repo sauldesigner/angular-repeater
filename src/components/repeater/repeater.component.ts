@@ -26,7 +26,8 @@ export class RepeaterComponent implements OnInit {
     private _selectedChanged: EventEmitter<any> = new EventEmitter<any>();
     private _template: TemplateRef<any> = null;
 
-    @ContentChild('subscriptionTemplate', null) public subscriptionTemplateRef: TemplateRef<any>;
+    @ContentChild('customTemplate', { read: TemplateRef, static: false })
+    public _customTemplate: TemplateRef<any>;
 
     public constructor() {
 
