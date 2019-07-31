@@ -1,5 +1,5 @@
-
-<hello name="..."></hello>
+<hello name="...">
+</hello>
 
 <hr />
 
@@ -7,5 +7,9 @@
                 [data]="employees" 
                 propertyKeyName="employeeId" 
                 (selectedChanged)="employeeSelectedChanged($event)">
+
+	<ng-template #blockRepeaterCustomTemplate let-employee="dataItem">
+		<div>#{{employee.employeeId}} - {{employee.name}}, {{employee.attribute}} </div>
+	</ng-template>
 
 </block-repeater>

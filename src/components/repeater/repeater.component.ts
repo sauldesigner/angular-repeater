@@ -24,10 +24,10 @@ export class RepeaterComponent implements OnInit {
 
     private _selectedData: any = null;
     private _selectedChanged: EventEmitter<any> = new EventEmitter<any>();
-    private _template: TemplateRef<any> = null;
+    // private _template: TemplateRef<any> = null;
 
-    @ContentChild('customTemplate', { read: TemplateRef, static: false })
-    public _customTemplate: TemplateRef<any>;
+    @ContentChild('blockRepeaterCustomTemplate', { read: TemplateRef, static: false })
+    public _template: TemplateRef<any>;
 
     public constructor() {
 

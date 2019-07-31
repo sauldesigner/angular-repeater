@@ -1,20 +1,19 @@
 
 
-<div id="{{id}}_corRepeater">
+<div id="{{id}}_blockRepeater">
 
-    <div id="corRepeaterContainer" class="verticalLayout">
+    <div id="blockRepeaterContainer" class="??">
 
         <ng-container *ngFor="let dataItem of itemsForRepetition; let index = index">
 
             <div id="reapeatItem_{{index}}"
                  class="??"
                  (click)="itemClickedHandler(dataItem)">
-                  #{{index}} {{dataItem.name}}
-                <!-- <ng-container *ngTemplateOutlet="template">
-                </ng-container> -->
+                  
+                 <ng-container *ngTemplateOutlet="template;context:{dataItem: dataItem}">
+                </ng-container>
 
             </div>
-
 
         </ng-container>
     </div>
