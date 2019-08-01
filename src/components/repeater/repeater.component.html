@@ -10,7 +10,7 @@
                  class="??"
                  (click)="itemClickedHandler(dataItem)">
                   
-                 <ng-container *ngTemplateOutlet="template;context:{dataItem: dataItem}">
+                 <ng-container *ngTemplateOutlet="template;context:{dataItem: dataItem, isSelected:itemIsSelected(dataItem)}">
                 </ng-container>
 
             </div>

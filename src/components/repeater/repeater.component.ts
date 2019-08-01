@@ -24,7 +24,6 @@ export class RepeaterComponent implements OnInit {
 
     private _selectedData: any = null;
     private _selectedChanged: EventEmitter<any> = new EventEmitter<any>();
-    // private _template: TemplateRef<any> = null;
 
     @ContentChild('blockRepeaterCustomTemplate', { read: TemplateRef, static: false })
     public _template: TemplateRef<any>;
@@ -34,7 +33,7 @@ export class RepeaterComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        console.log(this._template);
+        // console.log(this._template);
     }
 
     public itemClickedHandler(e: any): void {
@@ -57,7 +56,6 @@ export class RepeaterComponent implements OnInit {
 
     private setNewValue(value: string): void {
         this._selectedValue = value;
-        // console.log(this._selectedValue);
     }
 
 

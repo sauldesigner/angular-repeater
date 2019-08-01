@@ -8,8 +8,10 @@
                 propertyKeyName="employeeId" 
                 (selectedChanged)="employeeSelectedChanged($event)">
 
-	<ng-template #blockRepeaterCustomTemplate let-employee="dataItem">
-		<div>#{{employee.employeeId}} - {{employee.name}}, {{employee.attribute}} </div>
+	<ng-template #blockRepeaterCustomTemplate let-employee="dataItem" let-employeeIsSelected="isSelected" >
+		<div [ngStyle]="{'background-color':employeeIsSelected ? '#ffe6e6' : '#ccc' }">
+       {{employeeIsSelected}} #{{employee.employeeId}} - {{employee.name}}, {{employee.attribute}}
+      </div>
 	</ng-template>
 
 </block-repeater>

@@ -19,15 +19,16 @@ export class AppComponent implements OnInit {
 
   private getData(): void {
     this._employees = [
-      { employeeId: 'AAA', name: 'employee a', attribute: 1 },
-      { employeeId: 'BBB', name: 'employee b', attribute: 0 },
-      { employeeId: 'CCC', name: 'employee c', attribute: 3 }
+      { employeeId: 'AAA', name: 'Filomena Moya Campos', attribute: 1 },
+      { employeeId: 'BBB', name: 'Lucia Pastor Rojas', attribute: 0 },
+      { employeeId: 'CCC', name: 'Jose Manuel Losada Benitez', attribute: 3 },
+      { employeeId: 'DDD', name: 'Francisco Galindo Juarez', attribute: 2 }
     ];
   }
 
 
 public employeeSelectedChanged(employee: Employee):void{
-  console.log(employee, '<<<<');
+  console.log('employeeSelectedChanged', employee );
 }
 
 
