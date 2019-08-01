@@ -28,10 +28,13 @@ export class AppComponent implements OnInit {
 
 
 public employeeSelectedChanged(employee: Employee):void{
-  console.log('employeeSelectedChanged', employee );
+  console.log(employee.name + ' --->>> is selected');
 }
 
-
+public sendEmployeeHandler(event: any, employee: Employee):void{
+    console.log(employee.name + ' --->>> is sended');
+    event.stopPropagation();
+}
 
 
 
