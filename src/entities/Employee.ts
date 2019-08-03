@@ -1,6 +1,14 @@
 
 export class Employee {
+
   employeeId: string;
   name: string;
-  attribute: number;
+  email: string;
+  aniversary: string;
+  personalNumber: string;
+  organizationNumber: string;
+  phone: string;
+  isActive: boolean;
+  salary: number;
+
 }

@@ -7,7 +7,7 @@
 	<ng-template #blockRepeaterCustomTemplate let-employee="dataItem" let-employeeIsSelected="isSelected" >
 
 		<div [ngStyle]="{'background-color':employeeIsSelected ? '#ffe6e6' : '#ccc' }">
-       {{employeeIsSelected}} #{{employee.employeeId}} - {{employee.name}}, {{employee.attribute}} 
+       {{employeeIsSelected}} #{{employee.employeeId}} - {{employee.name}}
        <button (click)="sendEmployeeHandler($event, employee)">send now</button>
       </div>
 
