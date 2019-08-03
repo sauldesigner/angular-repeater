@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../../entities/Employee';
-import * as employees from '../../data/employees.json';
+import {EmployeeService} from '../../services/employee.service';
 
 @Component({
   selector: 'my-app',
@@ -9,16 +9,18 @@ import * as employees from '../../data/employees.json';
 })
 export class AppComponent implements OnInit {
 
-
   private _employees: Employee[] = [];
 
+constructor(private _employeeService: EmployeeService){
+
+}
 
   public ngOnInit(): void {
     this.getEmployees();
   }
 
   private getEmployees(): void {
-    this._employees = employees.default;
+    this._employees = this._employeeService.getEmployees();
   }
 
 
