@@ -1,13 +1,9 @@
-
-
 <div id="{{id}}_blockRepeater">
 
-    <div id="blockRepeaterContainer" class="??">
+    <div id="{{id}}_blockRepeaterContainer">
 
-        <ng-container *ngFor="let dataItem of itemsForRepetition; let index = index">
-
-            <div id="reapeatItem_{{index}}"
-                 class="??"
+            <div id="{{id}}_reapeatItem_{{index}}"
+                 *ngFor="let dataItem of itemsForRepetition; let index = index"
                  (click)="itemClickedHandler(dataItem)">
                   
                  <ng-container *ngTemplateOutlet="template;context:{dataItem: dataItem, isSelected:itemIsSelected(dataItem)}">
@@ -15,9 +11,6 @@
 
             </div>
 
-        </ng-container>
     </div>
 
 </div>
-
-

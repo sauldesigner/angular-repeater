@@ -17,7 +17,6 @@ export class EmployeeService {
 
   public getEmployeesOnRange(startIndex: number, count: number): Employee[] {
     let endIndex = startIndex + count;
-    console.log(startIndex, count, endIndex);
     return this._employees.filter((element, index: number) => (index >= startIndex) && (index < endIndex));
   }
 

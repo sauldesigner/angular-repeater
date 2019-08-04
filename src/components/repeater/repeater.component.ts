@@ -5,9 +5,9 @@ import {
     Output,
     EventEmitter,
     TemplateRef,
-    ContentChild,
-    ViewEncapsulation
+    ContentChild
 } from '@angular/core';
+
 
 @Component({
     selector: 'block-repeater',

@@ -1,2 +1,7 @@
 /* Add application styles & imports to this file! */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+.bd-highlight {
+  background-color: #c0bfbf;
+  border: 1px solid #858585;
+}
