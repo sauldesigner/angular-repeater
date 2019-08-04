@@ -20,12 +20,12 @@ constructor(private _employeeService: EmployeeService){
   }
 
   private getEmployees(): void {
-    this._employees = this._employeeService.getEmployeesOnRange(0, 4);
+    this._employees = this._employeeService.getEmployeesOnRange(0, 3);
   }
 
 
 public employeeSelectedChanged(employee: Employee):void{
-  console.log(employee.name + ' --->>> is selected');
+  console.log(employee.name + ' ---]]] is selected');
 }
 
 public sendEmployeeHandler(event: any, employee: Employee):void{
