@@ -6,14 +6,14 @@
 		<ng-template #blockRepeaterCustomTemplate let-employee="dataItem" let-employeeIsSelected="isSelected">
 
 
-			<div class="card" style="margin-bottom:8px;" [ngClass]="{'border-primary': employeeIsSelected}">
+			<div class="card float-left" style="margin: 5px 5px 0 0;" [ngClass]="{'border-primary bg-light': employeeIsSelected}">
 				<div class="card-header">
 					{{employee.name}}
 				</div>
 				<div class="card-body">
 					<h5 class="card-title">{{employee.name}}</h5>
 					<p class="card-text">
-						{{employee.email}} <br />{{employee.aniversary}}
+						{{employee.email}}
             </p>
             <button type="button" class="btn btn-success" (click)="sendEmployeeHandler($event, employee)">send now</button>
 				</div>
