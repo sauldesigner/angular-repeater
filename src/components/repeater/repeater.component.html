@@ -1,8 +1,6 @@
-<div id="{{id}}_blockRepeater">
+    <div class="{{containerClass}}" >
 
-    <div id="{{id}}_blockRepeaterContainer">
-
-            <div id="{{id}}_reapeatItem_{{index}}"
+            <div class="{{elementClass}}"
                  *ngFor="let dataItem of itemsForRepetition; let index = index"
                  (click)="itemClickedHandler(dataItem)">
                   
@@ -10,7 +8,4 @@
                 </ng-container>
 
             </div>
-
     </div>
-
-</div>

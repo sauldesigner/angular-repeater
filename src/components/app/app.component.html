@@ -1,7 +1,13 @@
 <div class="container-fluid">
 
 
-	<block-repeater id="employeeRepeater" [data]="employees" propertyKeyName="employeeId" (selectedChanged)="employeeSelectedChanged($event)">
+	<block-repeater id="employeeRepeater" 
+  [data]="employees" 
+  propertyKeyName="employeeId" 
+  (selectedChanged)="employeeSelectedChanged($event)"
+  containerClass="containerClassName"
+  elementClass="elementClassName"
+  >
 
 		<ng-template #blockRepeaterCustomTemplate let-employee="dataItem" let-employeeIsSelected="isSelected">
 
