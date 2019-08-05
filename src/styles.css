@@ -5,3 +5,9 @@
   background-color: #c0bfbf;
   border: 1px solid #858585;
 }
+.employeeContainer {
+  background-color: #ccc;
+}
+.employeeElement {
+  margin: 5px 5px 0 0;
+}

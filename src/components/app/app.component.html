@@ -1,18 +1,13 @@
 <div class="container-fluid">
 
 
-	<block-repeater id="employeeRepeater" 
-  [data]="employees" 
-  propertyKeyName="employeeId" 
-  (selectedChanged)="employeeSelectedChanged($event)"
-  containerClass="containerClassName"
-  elementClass="elementClassName"
-  >
+	<div block-repeater id="employeeRepeater" [data]="employees" propertyKeyName="employeeId" (selectedChanged)="employeeSelectedChanged($event)"
+	 containerClass="employeeContainer" elementClass="employeeElement">
 
 		<ng-template #blockRepeaterCustomTemplate let-employee="dataItem" let-employeeIsSelected="isSelected">
 
 
-			<div class="card float-left" style="margin: 5px 5px 0 0;" [ngClass]="{'border-primary bg-light': employeeIsSelected}">
+			<div class="card" [ngClass]="{'border-primary bg-light': employeeIsSelected}">
 				<div class="card-header">
 					{{employee.name}}
 				</div>
@@ -20,15 +15,15 @@
 					<h5 class="card-title">{{employee.name}}</h5>
 					<p class="card-text">
 						{{employee.email}}
-            </p>
-            <button type="button" class="btn btn-success" (click)="sendEmployeeHandler($event, employee)">send now</button>
+					</p>
+					<button type="button" class="btn btn-success" (click)="sendEmployeeHandler($event, employee)">send now</button>
 				</div>
 			</div>
 
 
 		</ng-template>
 
-	</block-repeater>
+	</div>
   
 
 

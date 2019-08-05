@@ -1,11 +1,9 @@
-    <div class="{{containerClass}}" >
+<div id="{{id}}_container" class="{{containerClass}}">
 
-            <div class="{{elementClass}}"
-                 *ngFor="let dataItem of itemsForRepetition; let index = index"
-                 (click)="itemClickedHandler(dataItem)">
-                  
-                 <ng-container *ngTemplateOutlet="template;context:{dataItem: dataItem, isSelected:itemIsSelected(dataItem)}">
-                </ng-container>
+	<div id="{{id}}_element" class="{{elementClass}}" *ngFor="let dataItem of itemsForRepetition; let index = index" (click)="itemClickedHandler(dataItem)">
 
-            </div>
-    </div>
+		<ng-container *ngTemplateOutlet="template;context:{dataItem: dataItem, isSelected:itemIsSelected(dataItem)}">
+		</ng-container>
+
+	</div>
+</div>

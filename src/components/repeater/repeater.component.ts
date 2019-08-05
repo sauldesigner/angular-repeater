@@ -10,7 +10,7 @@ import {
 
 
 @Component({
-  selector: 'block-repeater',
+  selector: '[block-repeater]',
   templateUrl: './repeater.component.html',
   styleUrls: ['./repeater.component.css']
 })
