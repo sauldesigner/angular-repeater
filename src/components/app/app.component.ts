@@ -20,7 +20,7 @@ constructor(private _employeeService: EmployeeService){
   }
 
   private getEmployees(): void {
-    this._employees = this._employeeService.getEmployeesOnRange(0, 6);
+    this._employees = this._employeeService.getEmployeesOnRange(0, 8);
   }
 
 

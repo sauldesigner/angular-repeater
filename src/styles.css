@@ -6,6 +6,7 @@
   border: 1px solid #858585;
 }
 .employeeContainer {
+  padding: 5px;
   background-color: #ccc;
 }
 .employeeElement {
