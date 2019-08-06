@@ -1,21 +1,25 @@
 <div class="container-fluid">
 
 
-	<div block-repeater id="employeeRepeater" [data]="employees" propertyKeyName="employeeId" (selectedChanged)="employeeSelectedChanged($event)"
-	 containerClass="d-flex flex-row justify-content-start align-items-start flex-wrap employeeContainer" elementClass="employeeElement">
+	<div block-repeater id="employeeRepeater" 
+        [data]="employees" 
+        propertyKeyName="employeeId" 
+        (selectedChanged)="employeeSelectedChanged($event)"
+        containerClass="d-flex flex-row justify-content-start align-items-start flex-wrap employeeContainer" 
+        elementClass="employeeElement">
 
-		<ng-template #blockRepeaterCustomTemplate let-employee="dataItem" let-employeeIsSelected="isSelected">
+		<ng-template #blockRepeaterCustomTemplate 
+                  let-employee="dataItem" 
+                  let-employeeIsSelected="isSelected">
 
-			<div class="card" [ngClass]="{'border-primary bg-light': employeeIsSelected}">
-				<div class="card-header">
-					{{employee.name}}
-				</div>
+			<div class="card" [ngClass]="{'border-primary bg-light': employeeIsSelected}" style="width: 300px; height: 140px;">
 				<div class="card-body">
 					<h5 class="card-title">{{employee.name}}</h5>
-					<p class="card-text">
+					<p class="card-text font-italic" style="font-size:14px" >
 						{{employee.email}}
 					</p>
-					<button type="button" class="btn btn-success" (click)="sendEmployeeHandler($event, employee)">send now</button>
+          <a href="#" class="card-link" (click)="sendEmployeeHandler($event, employee)">Send now</a>
+					<!-- <button type="button" class="btn btn-success" (click)="sendEmployeeHandler($event, employee)">send now</button> -->
 				</div>
 			</div>
 
