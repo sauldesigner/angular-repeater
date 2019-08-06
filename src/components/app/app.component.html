@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
 
-	<div block-repeater id="employeeRepeater" 
+	<div block-repeater id="employeeRepeaterFlex" 
         [data]="employees" 
         propertyKeyName="employeeId" 
         (selectedChanged)="employeeSelectedChanged($event)"
@@ -9,17 +9,18 @@
         elementClass="employeeElement">
 
 		<ng-template #blockRepeaterCustomTemplate 
+                  let-index="index"
                   let-employee="dataItem" 
                   let-employeeIsSelected="isSelected">
 
-			<div class="card" [ngClass]="{'border-primary bg-light': employeeIsSelected}" style="width: 300px; height: 140px;">
+			<div class="card" [ngClass]="{'border-primary bg-light': employeeIsSelected}" style="width: 300px; height: 160px;">
 				<div class="card-body">
-					<h5 class="card-title">{{employee.name}}</h5>
+					<h5 class="card-title">#{{index + 1}} {{employee.name}}</h5>
 					<p class="card-text font-italic" style="font-size:14px" >
-						{{employee.email}}
+						{{employee.email}}<br />
+            {{employee.phone}}
 					</p>
           <a href="#" class="card-link" (click)="sendEmployeeHandler($event, employee)">Send now</a>
-					<!-- <button type="button" class="btn btn-success" (click)="sendEmployeeHandler($event, employee)">send now</button> -->
 				</div>
 			</div>
 
@@ -27,9 +28,61 @@
 
 	</div>
   
+<hr />
 
+	<div block-repeater id="employeeRepeaterRows" 
+        [data]="employees" 
+        propertyKeyName="employeeId" 
+        (selectedChanged)="employeeSelectedChanged($event)"
+        containerClass="employeeContainer" 
+        elementClass="employeeElement">
 
+		<ng-template #blockRepeaterCustomTemplate 
+                  let-employee="dataItem" 
+                  let-employeeIsSelected="isSelected">
 
+			<div class="card" [ngClass]="{'border-primary bg-light': employeeIsSelected}" style="height: 160px;">
+				<div class="card-body">
+					<h5 class="card-title">{{employee.name}}</h5>
+					<p class="card-text font-italic" style="font-size:14px" >
+						{{employee.email}}<br />
+            {{employee.phone}}
+					</p>
+          <a href="#" class="card-link" (click)="sendEmployeeHandler($event, employee)">Send now</a>
+				</div>
+			</div>
+
+		</ng-template>
+
+	</div>
+
+<hr />
+
+	<div block-repeater id="employeeRepeaterCols" 
+        [data]="employees" 
+        propertyKeyName="employeeId" 
+        (selectedChanged)="employeeSelectedChanged($event)"
+        containerClass="row employeeContainer" 
+        elementClass="col-sm employeeElement">
+
+		<ng-template #blockRepeaterCustomTemplate 
+                  let-employee="dataItem" 
+                  let-employeeIsSelected="isSelected">
+
+			<div class="card" [ngClass]="{'border-primary bg-light': employeeIsSelected}" style="height: 160px;">
+				<div class="card-body">
+					<h5 class="card-title">{{employee.name}}</h5>
+					<p class="card-text font-italic" style="font-size:14px" >
+						{{employee.email}}<br />
+            {{employee.phone}}
+					</p>
+          <a href="#" class="card-link" (click)="sendEmployeeHandler($event, employee)">Send now</a>
+				</div>
+			</div>
+
+		</ng-template>
+
+	</div>
 
 
 
