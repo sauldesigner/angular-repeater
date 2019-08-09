@@ -96,6 +96,8 @@ export class RepeaterComponent implements OnInit {
 
   @Input("data")
   public set itemsForRepetition(value: any[]) {
+    this._selectedValue = null;
+    this._selectedData = null;
     this._itemsForRepetition = value;
   }
   public get itemsForRepetition(): any[] {
