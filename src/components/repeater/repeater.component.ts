@@ -138,14 +138,6 @@ export class RepeaterComponent implements OnInit {
   }
 
   @Input()
-  public set containerClass(value: string) {
-    this._containerClass = value;
-  }
-  public get containerClass(): string {
-    return this._containerClass;
-  }
-
-  @Input()
   public set elementClass(value: string) {
     this._elementClass = value;
   }

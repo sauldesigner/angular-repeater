@@ -1,11 +1,12 @@
 <div class="container-fluid">
 
 
-	<div block-repeater id="employeeRepeaterFlex" 
+	<div block-repeater 
+        id="employeeRepeaterFlex" 
+        class="d-flex flex-row justify-content-start align-items-start flex-wrap employeeContainer" 
         [data]="employees" 
         propertyKeyName="employeeId" 
         (selectedChanged)="employeeSelectedChanged($event)"
-        containerClass="d-flex flex-row justify-content-start align-items-start flex-wrap employeeContainer" 
         elementClass="employeeElement">
 
 		<ng-template #blockRepeaterCustomTemplate 
@@ -30,11 +31,12 @@
   
 <hr />
 
-	<div block-repeater id="employeeRepeaterRows" 
+	<div block-repeater 
+        id="employeeRepeaterRows" 
+        class="employeeContainer" 
         [data]="employees" 
         propertyKeyName="employeeId" 
         (selectedChanged)="employeeSelectedChanged($event)"
-        containerClass="employeeContainer" 
         elementClass="employeeElement">
 
 		<ng-template #blockRepeaterCustomTemplate 
@@ -58,11 +60,12 @@
 
 <hr />
 
-	<div block-repeater id="employeeRepeaterCols" 
+	<div block-repeater 
+        id="employeeRepeaterCols" 
+        class="row employeeContainer" 
         [data]="employees" 
         propertyKeyName="employeeId" 
         (selectedChanged)="employeeSelectedChanged($event)"
-        containerClass="row employeeContainer" 
         elementClass="col-sm employeeElement">
 
 		<ng-template #blockRepeaterCustomTemplate 
